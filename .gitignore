@@ -1,0 +1,9 @@
+/target
+/.vscode
+.DS_Store
+
+sample_data/
+medium_data/
+bulk_data/
+output*
+*Notes.txt
