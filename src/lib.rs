@@ -15,10 +15,10 @@ pub mod tcx;
 
 #[instrument]
 pub async fn parse_file(filename: &Path) -> Result<TrainingCenterDatabase> {
-    info!("Parsing: {}", filename.display());
+    info!("Begin parsing");
     let file_data = tokio::fs::read_to_string(filename).await?;
     let tcb = from_str(file_data.as_str())?;
-    info!("Successfully parsed: {}", filename.display());
+    info!("Successfully parsed");
     Ok(tcb)
 }
 
